@@ -5,7 +5,7 @@
  *
  * Version 1.0   -   Updated: Jan. 21, 2010
  *
- * This AutoSuggest jQuery plug-in is lcensed under a Creative Commons Attribution 3.0 Unported License. http://creativecommons.org/licenses/by/3.0/
+ * This jQuery plug-in is lcensed under a Creative Commons Attribution 3.0 Unported License. http://creativecommons.org/licenses/by/3.0/
  */
 
 (function($) {
