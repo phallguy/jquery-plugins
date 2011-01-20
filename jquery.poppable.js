@@ -5,9 +5,7 @@
  *
  * Version 1.0   -   Updated: Jan. 21, 2010
  * 
- * This simple on-hover pop-up script jQuery plug-in is dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
+ * This AutoSuggest jQuery plug-in is lcensed under a Creative Commons Attribution 3.0 Unported License. http://creativecommons.org/licenses/by/3.0/
  */
 (function($) {
 	$.fn.all = function(selector) {
