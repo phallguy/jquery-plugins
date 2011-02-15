@@ -34,8 +34,7 @@
 			
 			var container = $('<' + opts.containerType + ' class="' + opts.cssClass + '" />')
 												.css({
-													position: 'absolute',
-													display: input.val().length > 0 ? 'none' : 'block',
+													position: 'absolute'
 												})
 												.append( $('<label for="' + input.attr('id') + '">' + input.attr('placeholder') + '</label>' ).css({
 													fontFamily: input.css('fontFamily'),
@@ -63,7 +62,8 @@
 										
 			container.css({
 				paddingTop: parseInt(input.css('paddingTop')) + parseInt(input.css('borderTopWidth')) + ( input.offset().top - container.offset().top ),
-				paddingLeft: parseInt(input.css('paddingLeft')) + parseInt(input.css('borderLeftWidth')) + ( input.offset().left - container.offset().left )
+				paddingLeft: parseInt(input.css('paddingLeft')) + parseInt(input.css('borderLeftWidth')) + ( input.offset().left - container.offset().left ),
+				display: input.val().length > 0 ? 'none' : 'block'
 			})
 
 		});
