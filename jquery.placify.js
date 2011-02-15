@@ -35,9 +35,6 @@
 			var container = $('<' + opts.containerType + ' class="' + opts.cssClass + '" />')
 												.css({
 													position: 'absolute',
-													display: input.val().length ? 'none' : 'block',
-													left: input.position().left,
-													top: input.position().top
 												})
 												.html('<label for="' + input.attr('id') + '">' + input.attr('placeholder') + '</label>');
 												
@@ -56,8 +53,18 @@
 							else if( input.val().length == 0 )
 								container.fadeIn(opts.fadeSpeed);				
 					 });
+										
+			container.css({
+				paddingTop: parseInt(input.css('paddingTop')) + parseInt(input.css('borderTopWidth')) + ( input.offset().top - container.offset().top ),
+				paddingLeft: parseInt(input.css('paddingLeft')) + parseInt(input.css('borderLeftWidth')) + ( input.offset().left - container.offset().left )
+			})
+
 		});
 
 		return this;
 	}
+
+	// Automatically attach to all forms.
+	$('form').placify();
+	
 })(jQuery);
