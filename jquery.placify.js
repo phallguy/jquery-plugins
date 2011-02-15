@@ -31,12 +31,19 @@
 				$('input[placeholder]',input).placify(opts);
 				return;
 			}
-
+			
 			var container = $('<' + opts.containerType + ' class="' + opts.cssClass + '" />')
 												.css({
 													position: 'absolute',
+													display: input.val().length > 0 ? 'none' : 'block',
 												})
-												.html('<label for="' + input.attr('id') + '">' + input.attr('placeholder') + '</label>');
+												.append( $('<label for="' + input.attr('id') + '">' + input.attr('placeholder') + '</label>' ).css({
+													fontFamily: input.css('fontFamily'),
+													fontSize: input.css('fontSize'),
+													fontWeight: input.css('fontWeight'),
+													lineHeight: input.css('lineHeight')
+													
+												}));
 												
 			input.before(container)
 					 .removeAttr('placeholder') // Remove so default browser rendering is hidden
